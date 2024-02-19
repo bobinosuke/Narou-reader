@@ -105,7 +105,7 @@ class SpeedReadingApp:
             # 最後のページの読み上げが終了したら、次のファイルがあるかチェック
             if self.current_file_index < len(self.file_list) - 1:
                 self.next_file()  # 次のファイルに移動
-                self.start_reading()  # 読み上げを再開
+                #self.reading_mode = True
             else:
                 # 最後のファイルの最後のページであれば、読み上げモードをオフにする
                 self.reading_mode = False
@@ -254,17 +254,6 @@ class SpeedReadingApp:
         if 0 <= self.current_page < len(self.pages):
             self.display_text(self.pages[self.current_page])
             self.slider.set(self.current_page + 1)
-            
-            if self.reading_mode and self.current_page == len(self.pages) - 1:
-                # 次のファイルが存在するかチェック
-                if self.current_file_index < len(self.file_list) - 1:
-                    # 次のファイルに移動
-                    self.next_file()
-                    # 必要に応じて読み上げを再開
-                    self.start_reading()
-                else:
-                    # 最後のファイルの最後のページであれば、読み上げモードをオフにする
-                    self.reading_mode = False
 
     def slider_moved(self, event):
         new_page = int(self.slider.get()) - 1
