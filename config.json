@@ -1,0 +1,24 @@
+{
+  "_comment": "音声合成APIの各種設定",
+  "voice_api": {
+    "text": "",
+    "speaker_id": 0,
+    "_comment2": "↓読み上げのモデル選択 {model_assetsの何番目のフォルダを使うか指定する(スタートは0)}",
+    "model_id": 0,
+    "sdp_ratio": 0.2,
+    "noise": 0.6,
+    "noisew": 0.8,
+    "length": 1.1,
+    "language": "JP",
+    "auto_split": "true",
+    "split_interval": 1,
+    "assist_text": null,
+    "assist_text_weight": 1.0,
+    "style": "Neutral",
+    "style_weight": 5.0,
+    "reference_audio_path": null
+  },
+
+  "_comment3": "↓ここにダウンロードしたncodeのディレクトリを指定(例:./n6316bn)",
+  "ncode_dir": "./"
+}
