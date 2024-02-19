@@ -3,7 +3,7 @@
 仮想環境をつくってから依存ライブラリをダウンロードしてください。  
 
 ## reader.py  
-config.jsonで指定した作品を読み込んで読み上げのためのGUIを表示します。
+config.jsonで指定した作品を読み込んで読み上げのためのGUIを表示します。  
 Style-Bert-VITS2でserver_fastapi.pyを有効にした状態で読み上げを起動すると読み上げが行われます。  
 
 ## downloader.py  
